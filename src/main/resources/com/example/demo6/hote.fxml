@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="969.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo6.HoteController">
+    <children>
+        <Button fx:id="" layoutX="840.0" layoutY="16.0" mnemonicParsing="false" onAction="#GoToDec" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #CA5050;" text="Déconnexion" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" />
+        <Button layoutX="712.0" layoutY="16.0" mnemonicParsing="false" onAction="#GoToReservationH" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #CA5050;" text="Les reservations" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" />
+        <ImageView fitHeight="42.0" fitWidth="70.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@airbnb.png" />
+            </image>
+        </ImageView>
+        <TextField fx:id="filter" layoutX="348.0" layoutY="14.0" prefHeight="25.0" prefWidth="205.0" style="-fx-border-color: #CA5050;" />
+        <TableView fx:id="tbHotecol" layoutX="33.0" layoutY="69.0" onMouseClicked="#getSelected" prefHeight="276.0" prefWidth="947.0" style="-fx-border-color: #CA5050; -fx-border-color: #CA5050;" stylesheets="@table.css" AnchorPane.bottomAnchor="465.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="43.0" AnchorPane.topAnchor="69.0">
+            <columns>
+                <TableColumn fx:id="idcol" minWidth="-Infinity" text="Id" />
+            <TableColumn fx:id="titrecol" minWidth="-Infinity" prefWidth="147.0" text="Titre" />
+                <TableColumn fx:id="lieuxcol" minWidth="-Infinity" prefWidth="107.0" text="Lieux" />
+                <TableColumn fx:id="nbpersocol" minWidth="-Infinity" prefWidth="125.0" text="Nombre personne" />
+                <TableColumn fx:id="prixcol" minWidth="-Infinity" prefWidth="70.0" text="Prix" />
+            <TableColumn fx:id="chambrecol" minWidth="-Infinity" prefWidth="78.0" text="Chambre" />
+            <TableColumn fx:id="litcol" minWidth="-Infinity" prefWidth="85.0" text="Lit" />
+            <TableColumn fx:id="baincol" minWidth="-Infinity" prefWidth="110.0" text="bain" />
+            <TableColumn fx:id="datecol" minWidth="-Infinity" prefWidth="184.0" text="Date" />
+            <TableColumn fx:id="Imagecol" minWidth="-Infinity" prefWidth="209.0" text="Image" />
+            </columns>
+         <styleClass>
+            <String fx:value="table-cell" />
+            <String fx:value="table-header" />
+            <String fx:value="table-row-cell" />
+            <String fx:value="table-view" />
+         </styleClass>
+        </TableView>
+      <VBox layoutX="21.0" layoutY="292.0" prefHeight="342.0" prefWidth="252.0" styleClass="login_form_container" stylesheets="@auth.css">
+         <children>
+            <Label styleClass="login_form_container" stylesheets="@auth.css" text="Lieux" />
+            <TextField fx:id="tlieux" styleClass="input_field" stylesheets="@auth.css" />
+            <Label layoutX="10.0" layoutY="10.0" styleClass="login_form_container" stylesheets="@auth.css" text="Prix " />
+            <TextField fx:id="tprix" layoutX="10.0" layoutY="27.0" styleClass="input_field" stylesheets="@auth.css" />
+            <Label layoutX="10.0" layoutY="52.0" prefHeight="19.0" prefWidth="99.0" styleClass="login_form_container" stylesheets="@auth.css" text="Nombre de lit" />
+            <TextField fx:id="tlit" layoutX="10.0" layoutY="69.0" styleClass="input_field" stylesheets="@auth.css" />
+            <Label layoutX="10.0" layoutY="94.0" styleClass="login_form_container" stylesheets="@auth.css" text="Titre" />
+            <TextArea fx:id="ttitre" prefHeight="200.0" prefWidth="200.0" styleClass="input_field" />
+         </children>
+      </VBox>
+      <VBox layoutX="352.0" layoutY="295.0" prefHeight="342.0" prefWidth="241.0" styleClass="login_form_container" stylesheets="@auth.css">
+         <children>
+            <Label styleClass="login_form_container" stylesheets="@auth.css" text="Adresse" />
+            <TextField fx:id="tadresse" styleClass="input_field" stylesheets="@auth.css" />
+            <Label layoutX="10.0" layoutY="10.0" styleClass="login_form_container" stylesheets="@auth.css" text="Nombre de personne" />
+            <TextField fx:id="tnbrperso" layoutX="10.0" layoutY="27.0" styleClass="input_field" stylesheets="@auth.css" />
+            <Label layoutX="10.0" layoutY="52.0" styleClass="login_form_container" stylesheets="@auth.css" text="Nombre de bain" />
+            <TextField fx:id="tbain" layoutX="10.0" layoutY="69.0" styleClass="input_field" stylesheets="@auth.css" />
+            <Label layoutX="10.0" layoutY="136.0" styleClass="login_form_container" stylesheets="@auth.css" text="Description" />
+            <TextArea fx:id="tdescription" prefHeight="73.0" prefWidth="355.0" styleClass="input_field" stylesheets="@auth.css" />
+         </children>
+      </VBox>
+      <VBox layoutX="694.0" layoutY="295.0" prefHeight="256.0" prefWidth="241.0" styleClass="login_form_container" stylesheets="@auth.css">
+         <children>
+
+            <Label layoutX="10.0" layoutY="10.0" styleClass="login_form_container" stylesheets="@auth.css" text="Nombre de chambre" />
+            <TextField fx:id="tchambre" layoutX="10.0" layoutY="27.0" styleClass="input_field" stylesheets="@auth.css" />
+            <Label layoutX="10.0" layoutY="52.0" styleClass="login_form_container" stylesheets="@auth.css" text="Date arrivée-depart" />
+            <TextField fx:id="tdate" layoutX="10.0" layoutY="69.0" styleClass="input_field" stylesheets="@auth.css" />
+            <Label layoutX="10.0" layoutY="94.0" styleClass="login_form_container" stylesheets="@auth.css" text="Lien de l'image" />
+            <TextField fx:id="timage" layoutX="10.0" layoutY="128.0" styleClass="input_field" stylesheets="@auth.css" />
+         </children>
+      </VBox>
+      <HBox layoutX="760.0" layoutY="765.0" prefHeight="42.0" prefWidth="110.0" />
+      <Button fx:id="bajouter" layoutX="849.0" layoutY="650.0" mnemonicParsing="false" onAction="#add_sejour" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #0000FF;" text="Ajouter" textFill="WHITE" />
+      <Button fx:id="bsupprimer" layoutX="14.0" layoutY="650.0" mnemonicParsing="false" onAction="#Delete" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #FF0000;" text="Supprimer" textFill="WHITE" />
+      <TextField fx:id="tid" layoutX="975.0" layoutY="536.0" prefHeight="19.0" prefWidth="6.0" styleClass="input_field" stylesheets="@auth.css" />
+      <Button fx:id="bmodifier" layoutX="720.0" layoutY="650.0" mnemonicParsing="false" onAction="#Edit" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #198754;" text="Modifier" textFill="WHITE" />
+    </children>
+</AnchorPane>

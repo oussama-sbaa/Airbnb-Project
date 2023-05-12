@@ -1,0 +1,29 @@
+/* Définition des styles pour les cellules de la TableView */
+.table-cell {
+    -fx-padding: 10px;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+}
+
+/* Style pour la ligne sélectionnée */
+.table-row-cell:selected {
+    -fx-background-color:  #CA5050;
+    -fx-text-fill: white;
+}
+
+/* Style pour l'en-tête de la TableView */
+.table-header {
+    -fx-background-color:  #CA5050;
+    -fx-text-fill: white;
+}
+
+/* Style pour la bordure de la TableView */
+.table-view {
+    -fx-border-color: #5c4d4d;
+    -fx-border-width: 1px;
+}
+
+/* Style pour les lignes de la TableView */
+.table-row-cell:odd {
+    -fx-background-color: #f2f2f2;
+}
