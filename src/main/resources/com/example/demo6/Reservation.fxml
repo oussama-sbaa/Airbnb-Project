@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo6.ReservationController">
+    <children>
+        <TableView fx:id="tbrcol" layoutX="50.0" layoutY="62.0" onMouseClicked="#getSelected" prefHeight="314.0" prefWidth="897.0" style="-fx-border-color: #CA5050; -fx-border-color: #CA5050;" stylesheets="@table.css">
+            <columns>
+                <TableColumn fx:id="idcol" minWidth="-Infinity" prefWidth="0.0" text="Id" />
+                <TableColumn fx:id="idsejourcol" minWidth="-Infinity" prefWidth="0.0" text="id" />
+                <TableColumn fx:id="idreservationcol" minWidth="-Infinity" prefWidth="150.0" text="Numéro de reservation" />
+                <TableColumn fx:id="sejourcol" minWidth="-Infinity" prefWidth="404.0" text="Séjour" />
+                <TableColumn fx:id="statutcol" minWidth="-Infinity" prefWidth="388.0" text="Statut" />
+            </columns>
+            <styleClass>
+                <String fx:value="table-cell" />
+                <String fx:value="table-header" />
+                <String fx:value="table-row-cell" />
+                <String fx:value="table-view" />
+            </styleClass>
+        </TableView>
+        <Button layoutX="830.0" layoutY="16.0" mnemonicParsing="false" onAction="#GoToAuth" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #CA5050;" text="Déconnexion" textFill="WHITE" />
+        <Button layoutX="694.0" layoutY="16.0" mnemonicParsing="false" onAction="#GoToAcc" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #CA5050;" text="Accueil" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" />
+        <TextField fx:id="filter" layoutX="279.0" layoutY="14.0" prefHeight="25.0" prefWidth="205.0" style="-fx-border-color: #CA5050;" />
+        <ImageView fitHeight="42.0" fitWidth="70.0" layoutX="23.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@airbnb.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="bvalider" layoutX="830.0" layoutY="415.0" mnemonicParsing="false" onAction="#Valider" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #198754;" text="Valider" textFill="WHITE" />
+        <Button fx:id="bsupprimer" layoutX="67.0" layoutY="415.0" mnemonicParsing="false" onAction="#Delete" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #FF0000;" text="Supprimer" textFill="WHITE" />
+        <TextField fx:id="tid" layoutX="15.0" layoutY="-55.0" prefHeight="0.0" prefWidth="16.0" styleClass="input_field" stylesheets="@auth.css" />
+    </children>
+</AnchorPane>
