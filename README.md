@@ -20,3 +20,7 @@ En tant qu'hôte, l'utilisateur accède à la page d'accueil contenant un formul
 # Crédits
 
 Ce projet a été développé par Oussama SBAA et Ali MTAHRI.
+
+# Remarque:
+
+Cette Repository contient 3 branches: la branche "Interface_Hote" qui contient l'implémentation des fonctionnalités liées à l'hôte, la branche "Interface_User" qui contient l'implémentation des fonctionnalités liées à l'utilisateur, et la branche principale "main" qui contient le fichier README avec une petite description du projet.
