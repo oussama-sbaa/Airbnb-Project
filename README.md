@@ -8,7 +8,7 @@ Une fois authentifié en tant que user, l'utilisateur accède à la page d'accue
 
 En tant qu'hôte, l'utilisateur accède à la page d'accueil contenant un formulaire de recherche et la liste des séjours. Il a également accès à une liste des séjours qu'il propose uniquement. L'hôte peut accéder à une liste de toutes les demandes de réservation en cours qu'il peut valider ou annuler. Enfin, l'hôte a accès à un planning récapitulant toutes les réservations validées pour les séjours qu'il propose.
 
-## Le projet est développé en JavaFX, et est lié à une base de données MySQL.
+=> Le projet est développé en JavaFX, et est lié à une base de données MySQL.
 
 # Installation et exécution
 
